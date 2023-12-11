@@ -1,0 +1,26 @@
+namespace: default
+
+helm:
+  releaseName: nginx
+
+targetCustomizations:
+- name: dev
+  helm:
+    chart: https://charts.bitnami.com/bitnami/nginx-15.4.4.tgz
+  clusterSelector:
+    matchLabels:
+      example.com/cluster: dev
+
+- name: prod
+  helm:
+    chart: https://charts.bitnami.com/bitnami/nginx-15.4.4.tgz
+  clusterSelector:
+    matchLabels:
+      example.com/cluster: prod
+
+- name: dr
+  helm:
+    chart: https://github.com/suse-gabrielblais/artifacts/raw/main/nginx-15.4.4.tgz
+  clusterSelector:
+    matchLabels:
+      example.com/cluster: dr
