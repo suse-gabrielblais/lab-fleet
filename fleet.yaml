@@ -20,7 +20,7 @@ targetCustomizations:
 
 - name: dr
   helm:
-    chart: https://github.com/suse-gabrielblais/artifacts/raw/main/nginx-15.4.4.tgz
+    chart: https://github.com/suse-gabrielblais/artifacts/raw/main/apache-10.2.4.tgz
   clusterSelector:
     matchLabels:
       example.com/cluster: dr
