@@ -13,7 +13,7 @@ targetCustomizations:
 
 - name: prod
   helm:
-    chart: https://charts.bitnami.com/bitnami/nginx-15.4.4.tgz
+    chart: https://github.com/suse-gabrielblais/artifacts/raw/main/nginx-15.4.4.tgz
   clusterSelector:
     matchLabels:
       example.com/cluster: prod
