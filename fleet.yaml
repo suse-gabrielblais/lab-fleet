@@ -1,9 +1,8 @@
 ---
-defaultNamespace: fleet-poc
+defaultNamespace: cattle-system
 
 helm:
-  releaseName: kube-ops-view-2
-  repo: https://christianhuth.github.io/helm-charts
-  chart: kube-ops-view
-  version: 3.5.1
-  values: {}
+  releaseName: rancher
+  repo: https://releases.rancher.com/server-charts/stable
+  chart: rancher
+  version: 2.13.3
