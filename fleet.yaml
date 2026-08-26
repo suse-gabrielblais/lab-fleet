@@ -4,6 +4,7 @@ defaultNamespace: default
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
+    namespace: fleet-default
 helm:
   chart: harbor
   releaseName: harbor
@@ -14,3 +15,4 @@ helm:
     - secretKeyRef:
         name: test-secret-fleet-ns
         key: values.yaml
+        namespace: fleet-default
