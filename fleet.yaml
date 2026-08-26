@@ -6,7 +6,7 @@ downstreamResources:
     name: test-secret-fleet-ns
     namespace: fleet-default
 helm:
-  chart: bitnami/nginx
+  chart: nginx
   releaseName: nginx
   repo: https://charts.bitnami.com/bitnami
   values:
