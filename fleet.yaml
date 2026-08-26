@@ -11,6 +11,7 @@ helm:
   repo: https://charts.bitnami.com/bitnami
   values:
     revisionHistoryLimit: 9
+    service.type: "ClusterIP"
   valuesFrom:
     - secretKeyRef:
         name: test-secret-fleet-ns
