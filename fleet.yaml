@@ -1,8 +1,16 @@
 ---
-defaultNamespace: cattle-system
-
+name: harbor
+defaultNamespace: default
+downstreamResources:
+  - kind: Secret
+    name: test-secret-fleet-ns
 helm:
-  releaseName: rancher
-  repo: https://releases.rancher.com/server-charts/stable
-  chart: rancher
-  version: 2.13.3
+  chart: harbor
+  releaseName: harbor
+  repo: https://helm.goharbor.io
+  values:
+    logLevel: "warning"
+  valuesFrom:
+    - secretKeyRef:
+        name: test-secret-fleet-ns
+        key: values.yaml
