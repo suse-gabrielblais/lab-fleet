@@ -1,10 +1,1 @@
-ingress:
-  tls:
-    source: secret
-privateCA: true
-hostname: rancher.example.com
-antiAffinity: required
-global:
-  cattle:
-    psp:
-      enabled: false
+
