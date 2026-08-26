@@ -1,16 +1,16 @@
 ---
-name: harbor
+name: nginx
 defaultNamespace: default
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
     namespace: fleet-default
 helm:
-  chart: harbor
-  releaseName: harbor
-  repo: https://helm.goharbor.io
+  chart: bitnami/nginx
+  releaseName: nginx
+  repo: https://charts.bitnami.com/bitnami
   values:
-    logLevel: "warning"
+    revisionHistoryLimit: 9
   valuesFrom:
     - secretKeyRef:
         name: test-secret-fleet-ns
