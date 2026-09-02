@@ -4,7 +4,6 @@ defaultNamespace: default
 downstreamResources:
   - kind: Secret
     name: test-secret
-    namespace: default
 helm:
   chart: grafana
   releaseName: grafana
