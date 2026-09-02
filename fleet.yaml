@@ -1,17 +1,17 @@
 ---
-name: nginx
+name: grafana
 defaultNamespace: default
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
     namespace: fleet-default
 helm:
-  chart: nginx
-  releaseName: nginx
-  repo: https://charts.bitnami.com/bitnami
+  chart: grafana
+  releaseName: grafana
+  repo: https://grafana-community.github.io/helm-charts
   values:
-    revisionHistoryLimit: 9
-    service.type: "ClusterIP"
+    env:
+      ENVIRONMENT: lab
   valuesFrom:
     - secretKeyRef:
         name: test-secret-fleet-ns
