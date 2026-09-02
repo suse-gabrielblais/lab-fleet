@@ -3,7 +3,7 @@ name: grafana
 defaultNamespace: default
 downstreamResources:
   - kind: Secret
-    name: test-secret
+    name: test-secret-fleet-ns
 helm:
   chart: grafana
   releaseName: grafana
@@ -13,6 +13,6 @@ helm:
       ENVIRONMENT: lab
   valuesFrom:
     - secretKeyRef:
-        name: test-secret
+        name: test-secret-fleet-ns
         key: values.yaml
-        namespace: default
+        namespace: fleet-default
