@@ -15,4 +15,3 @@ helm:
     - secretKeyRef:
         name: test-secret-fleet-ns
         key: values.yaml
-        namespace: grafana
