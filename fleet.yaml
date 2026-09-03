@@ -1,5 +1,6 @@
 ---
 name: grafana
+defaultNamespace: grafana
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
@@ -7,7 +8,6 @@ helm:
   chart: grafana
   releaseName: grafana
   repo: https://grafana-community.github.io/helm-charts
-  namespace: grafana
   values:
     env:
       ENVIRONMENT: lab
