@@ -1,6 +1,5 @@
 ---
 name: grafana
-defaultNamespace: grafana
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
