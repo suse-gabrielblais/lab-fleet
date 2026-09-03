@@ -4,6 +4,7 @@ defaultNamespace: default
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
+    namespace: fleet-default
 helm:
   chart: grafana
   releaseName: grafana
