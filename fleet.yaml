@@ -1,10 +1,9 @@
 ---
 name: grafana
-defaultNamespace: default
+defaultNamespace: grafana
 downstreamResources:
   - kind: Secret
     name: test-secret-fleet-ns
-    namespace: fleet-default
 helm:
   chart: grafana
   releaseName: grafana
@@ -16,4 +15,4 @@ helm:
     - secretKeyRef:
         name: test-secret-fleet-ns
         key: values.yaml
-        namespace: fleet-default
+        namespace: grafana
